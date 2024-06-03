@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class InGamePage extends StatefulWidget {
+  const InGamePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<InGamePage> createState() => _InGamePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _InGamePageState extends State<InGamePage> {
   List<String> board = List.generate(9, (index) => '');
   List<int> moveHistoryX = [];
   List<int> moveHistoryO = [];
