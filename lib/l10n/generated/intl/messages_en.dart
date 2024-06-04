@@ -23,8 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "labelChallenge": MessageLookupByLibrary.simpleMessage("MY CHALLENGES"),
+        "labelClose": MessageLookupByLibrary.simpleMessage("Close"),
+        "labelGameMode": MessageLookupByLibrary.simpleMessage("GAME MODE"),
         "labelLetsGo": MessageLookupByLibrary.simpleMessage("Lets go"),
         "labelMultiPlayer": MessageLookupByLibrary.simpleMessage("MULTIPLAYER"),
+        "labelOptionIndefine": MessageLookupByLibrary.simpleMessage(
+            "Option currently unavailable!"),
         "labelPlayOnline": MessageLookupByLibrary.simpleMessage("PLAY ONLINE"),
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Tic Tac Toe Infinity"),

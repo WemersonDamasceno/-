@@ -60,6 +60,26 @@ class S {
     );
   }
 
+  /// `Close`
+  String get labelClose {
+    return Intl.message(
+      'Close',
+      name: 'labelClose',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `GAME MODE`
+  String get labelGameMode {
+    return Intl.message(
+      'GAME MODE',
+      name: 'labelGameMode',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Lets go`
   String get labelLetsGo {
     return Intl.message(
@@ -75,6 +95,16 @@ class S {
     return Intl.message(
       'MULTIPLAYER',
       name: 'labelMultiPlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Option currently unavailable!`
+  String get labelOptionIndefine {
+    return Intl.message(
+      'Option currently unavailable!',
+      name: 'labelOptionIndefine',
       desc: '',
       args: [],
     );

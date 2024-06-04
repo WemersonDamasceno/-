@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:tictactoe/core/constants/app_colors.dart';
 import 'package:tictactoe/core/constants/app_images.dart';
 import 'package:tictactoe/core/constants/app_routes.dart';
+import 'package:tictactoe/core/widgets/title_page_widget.dart';
 import 'package:tictactoe/l10n/generated/l10n.dart';
 import 'package:tictactoe/presentation/choose_game_mode/mixins/choose_game_mode_mixin.dart';
 import 'package:tictactoe/presentation/choose_game_mode/widgets/game_mode_item_widget.dart';
@@ -20,21 +21,8 @@ class ChooseGameModePage extends StatelessWidget with ChooseGameModeMixin {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: kToolbarHeight),
-            const Text(
-              "MODO DE JOGO",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            Container(
-              width: size.width * 0.25,
-              height: 10,
-              decoration: BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: BorderRadius.circular(10),
-              ),
+            TitlePageWidget(
+              label: S.current.labelGameMode,
             ),
             SizedBox(height: size.height * 0.05),
             Row(

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe/core/constants/app_colors.dart';
+import 'package:tictactoe/core/constants/app_images.dart';
+import 'package:tictactoe/core/widgets/card_scoreboard_widget.dart';
+import 'package:tictactoe/core/widgets/title_page_widget.dart';
 
 class MultiPlayerModePage extends StatefulWidget {
   const MultiPlayerModePage({super.key});
@@ -72,14 +76,35 @@ class _MultiPlayerModePageState extends State<MultiPlayerModePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tic Tac Toe Infinito'),
-      ),
+      backgroundColor: AppColors.background,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: kToolbarHeight),
+            const TitlePageWidget(
+              label: "PLACAR",
+            ),
+            const SizedBox(height: 16),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CardScoreboardWidget(
+                  color: AppColors.secondary,
+                  player: 'Player 1',
+                  score: 2,
+                  image: AppImages.x,
+                ),
+                CardScoreboardWidget(
+                  color: AppColors.primary,
+                  player: 'Player 2',
+                  score: 1,
+                  image: AppImages.o,
+                ),
+              ],
+            ),
             _buildBoard(),
             const SizedBox(height: 16),
             if (winner.isNotEmpty) _buildWinnerMessage(),
