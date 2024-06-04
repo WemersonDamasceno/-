@@ -14,24 +14,46 @@ dependencies:
   cupertino_icons: ^1.0.6 # pub.dev/packages/cupertino_icons
   go_router: ^14.1.4      # pub.dev/packages/go_router
   flutter_svg: ^2.0.10+1  # pub.dev/packages/flutter_svg
+  lottie: ^3.1.2          # pub.dev/packages/lottie
+  flutter_localizations:  # pub.dev/packages/flutter_localizations
+    sdk: flutter
+  intl: ^0.19.0           # pub.dev/packages/intl
+  intl_utils: ^2.8.7      # pub.dev/packages/intl_utils
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^3.0.0   # pub.dev/packages/flutter_lints
+  build_runner: ^2.4.10   # https://pub.dev/packages/build_runner
+  flutter_gen: ^5.4.0     # https://pub.dev/packages/flutter_gen
 
 
 flutter:
-
-  uses-material-design: true
-
+  generate: true          # Generate the FlutterGen files
+  uses-material-design: true  
+  
   assets:
     - assets/images/
     - assets/sounds/
     - assets/fonts/
-
+    - assets/animations/
+  
   fonts:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Bold.ttf
+        
+flutter_intl:             # Configuration for flutter_intl
+  enabled: true
+  template-arb-file: intl_pt.arb
+  untranslated-messages-file: lib/l10n/untranslated_messages_file.txt
+  arb_dir: lib/l10n/arb
+  output_dir: lib/l10n/generated
+  output-localization-file: app_localizations.dart
+  nullable-getter: false
+
+
+
+

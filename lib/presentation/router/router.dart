@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:tictactoe/core/constants/app_routes.dart';
 import 'package:tictactoe/presentation/choose_game_mode/views/choose_game_mode_page.dart';
-import 'package:tictactoe/presentation/in_game/views/in_game_page.dart';
+import 'package:tictactoe/presentation/multiplayer_mode/views/in_game_page.dart';
 import 'package:tictactoe/presentation/splash/views/splash_page.dart';
 
 final GoRouter router = GoRouter(
@@ -15,10 +15,10 @@ final GoRouter router = GoRouter(
       },
     ),
     GoRoute(
-      path: "/${AppRoutes.inGame}",
-      name: AppRoutes.inGame,
+      path: "/${AppRoutes.multiplayer}",
+      name: AppRoutes.multiplayer,
       builder: (_, state) {
-        return const InGamePage();
+        return const MultiPlayerModePage();
       },
     ),
     GoRoute(

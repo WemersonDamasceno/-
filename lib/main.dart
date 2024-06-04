@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tictactoe/l10n/generated/l10n.dart';
 import 'package:tictactoe/presentation/router/router.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -17,6 +20,14 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Roboto',
       ),
       routerConfig: router,
+      onGenerateTitle: (_) => S.current.labelProjectName,
+      supportedLocales: S.delegate.supportedLocales,
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
     );
   }
 }

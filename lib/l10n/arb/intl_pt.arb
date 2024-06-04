@@ -1,0 +1,15 @@
+{
+  "@@locale": "pt",
+  "labelChallenge": "MEUS DESAFIOS",
+  "@labelChallenge": {},
+  "labelLetsGo": "Vamos lá",
+  "@labelLetsGo": {},
+  "labelMultiPlayer": "DOIS JOGADORES",
+  "@labelMultiPlayer": {},
+  "labelPlayOnline": "JOGUE ONLINE",
+  "@labelPlayOnline": {},
+  "labelProjectName": "Jogo da Velha Infinito",
+  "@labelProjectName": {},
+  "labelSinglePlayer": "UM JOGADOR",
+  "@labelSinglePlayer": {}
+}

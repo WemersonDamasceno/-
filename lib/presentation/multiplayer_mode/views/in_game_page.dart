@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class InGamePage extends StatefulWidget {
-  const InGamePage({super.key});
+class MultiPlayerModePage extends StatefulWidget {
+  const MultiPlayerModePage({super.key});
 
   @override
-  State<InGamePage> createState() => _InGamePageState();
+  State<MultiPlayerModePage> createState() => _MultiPlayerModePageState();
 }
 
-class _InGamePageState extends State<InGamePage> {
+class _MultiPlayerModePageState extends State<MultiPlayerModePage> {
   List<String> board = List.generate(9, (index) => '');
   List<int> moveHistoryX = [];
   List<int> moveHistoryO = [];

@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "labelChallenge": "MY CHALLENGES",
+  "@labelChallenge": {},
+  "labelLetsGo": "Lets go",
+  "@labelLetsGo": {},
+  "labelMultiPlayer": "MULTIPLAYER",
+  "@labelMultiPlayer": {},
+  "labelPlayOnline": "PLAY ONLINE",
+  "@labelPlayOnline": {},
+  "labelProjectName": "Tic Tac Toe Infinity",
+  "@labelProjectName": {},
+  "labelSinglePlayer": "SINGLE PLAYER",
+  "@labelSinglePlayer": {}
+}
