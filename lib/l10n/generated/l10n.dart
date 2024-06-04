@@ -110,6 +110,16 @@ class S {
     );
   }
 
+  /// `PLAYER {s} WINS!\nCONGRATULATIONS!`
+  String labelPlayerNWinner(Object s) {
+    return Intl.message(
+      'PLAYER $s WINS!\nCONGRATULATIONS!',
+      name: 'labelPlayerNWinner',
+      desc: '',
+      args: [s],
+    );
+  }
+
   /// `PLAY ONLINE`
   String get labelPlayOnline {
     return Intl.message(
@@ -135,6 +145,16 @@ class S {
     return Intl.message(
       'SINGLE PLAYER',
       name: 'labelSinglePlayer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TRY AGAIN`
+  String get labelTryAgain {
+    return Intl.message(
+      'TRY AGAIN',
+      name: 'labelTryAgain',
       desc: '',
       args: [],
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tictactoe/core/constants/app_colors.dart';
 
 class CardScoreboardWidget extends StatelessWidget {
   final Color color;
@@ -18,7 +19,7 @@ class CardScoreboardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 120,
+      width: 130,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(10),
@@ -28,16 +29,16 @@ class CardScoreboardWidget extends StatelessWidget {
           const SizedBox(height: 10),
           Card(
             child: SizedBox(
-              width: 90,
-              height: 90,
+              width: 80,
+              height: 80,
               child: FittedBox(
                 child: Center(
                   child: Text(
                     score.toString(),
                     style: const TextStyle(
-                      fontSize: 50,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: AppColors.black,
                     ),
                   ),
                 ),
@@ -57,7 +58,7 @@ class CardScoreboardWidget extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Divider(
-              color: Colors.black,
+              color: AppColors.black,
               height: 2,
             ),
           ),

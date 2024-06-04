@@ -1,9 +1,11 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:tictactoe/core/constants/app_colors.dart';
 import 'package:tictactoe/core/constants/app_images.dart';
 import 'package:tictactoe/core/constants/app_routes.dart';
+import 'package:tictactoe/core/constants/app_sounds.dart';
 import 'package:tictactoe/core/widgets/background_gradient_widget.dart';
 
 class SplashPage extends StatefulWidget {
@@ -16,10 +18,13 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
+  late AudioPlayer player;
 
   @override
   void initState() {
     super.initState();
+    player = AudioPlayer()..play(AssetSource(AppSounds.splash));
+    player.setVolume(0.7);
 
     animationController = AnimationController(
       vsync: this,

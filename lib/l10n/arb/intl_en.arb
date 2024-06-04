@@ -12,10 +12,18 @@
   "@labelMultiPlayer": {},
   "labelOptionIndefine": "Option currently unavailable!",
   "@labelOptionIndefine": {},
+  "labelPlayerNWinner": "PLAYER {s} WINS!\nCONGRATULATIONS!",
+  "@labelPlayerNWinner": {
+    "placeholders": {
+      "s": {}
+    }
+  },
   "labelPlayOnline": "PLAY ONLINE",
   "@labelPlayOnline": {},
   "labelProjectName": "Tic Tac Toe Infinity",
   "@labelProjectName": {},
   "labelSinglePlayer": "SINGLE PLAYER",
-  "@labelSinglePlayer": {}
+  "@labelSinglePlayer": {},
+  "labelTryAgain": "TRY AGAIN",
+  "@labelTryAgain": {}
 }

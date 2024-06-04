@@ -12,10 +12,18 @@
   "@labelMultiPlayer": {},
   "labelOptionIndefine": "Opção indisponível no momento!",
   "@labelOptionIndefine": {},
+  "labelPlayerNWinner": "JOGADOR {s} VENCEU!\nPARABÉNS!",
+  "@labelPlayerNWinner": {
+    "placeholders": {
+      "s": {}
+    }
+  },
   "labelPlayOnline": "JOGUE ONLINE",
   "@labelPlayOnline": {},
   "labelProjectName": "Jogo da Velha Infinito",
   "@labelProjectName": {},
   "labelSinglePlayer": "UM JOGADOR",
-  "@labelSinglePlayer": {}
+  "@labelSinglePlayer": {},
+  "labelTryAgain": "TENTAR NOVAMENTE",
+  "@labelTryAgain": {}
 }

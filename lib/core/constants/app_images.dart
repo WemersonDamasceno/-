@@ -12,7 +12,6 @@ class AppImages {
 
   static const String win = '$basePath/win.png';
   static const String lose = '$basePath/lose.png';
-  static const String draw = '$basePath/draw.png';
 
   static const String singlePlayerMode = '$basePath/single-player.png';
   static const String multiPlayerMode = '$basePath/multi-player.png';
