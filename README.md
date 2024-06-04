@@ -60,6 +60,6 @@ $ flutter pub get
 $ flutter run
 
 
-O app pode ser baixado aqui: <a href="https://drive.google.com/file/d/1ZMeDHhdDrAcg66CNDtRjxEZnchV_LDNC/view?usp=sharing">Download aqui!</a>
+O app pode ser baixado aqui: <a href="https://drive.google.com/file/d/1oS9kBSOUm5-Iat4kH487wz6Sqn-iu6iF/view?usp=sharing">Download aqui!</a>
 
 Made with :heart: and Flutter 3.19.5 e Dart 3.3.3.
