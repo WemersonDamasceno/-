@@ -8,6 +8,7 @@ mixin DialogMixin {
   showDialogEndGame(BuildContext context, int winner, Function resetGame) {
     return showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) {
         return AlertDialog(
           title: Text(
@@ -28,8 +29,9 @@ mixin DialogMixin {
             ButtonLargeWidget.fill(
               label: S.current.labelTryAgain,
               onPressed: () {
-                resetGame();
                 Navigator.pop(context);
+
+                resetGame();
               },
             )
           ],

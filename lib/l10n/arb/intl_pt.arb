@@ -22,6 +22,8 @@
   "@labelPlayOnline": {},
   "labelProjectName": "Jogo da Velha Infinito",
   "@labelProjectName": {},
+  "labelScoreboard": "PLACAR",
+  "@labelScoreboard": {},
   "labelSinglePlayer": "UM JOGADOR",
   "@labelSinglePlayer": {},
   "labelTryAgain": "TENTAR NOVAMENTE",

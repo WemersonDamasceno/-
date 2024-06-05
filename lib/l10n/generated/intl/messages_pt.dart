@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "labelPlayerNWinner": m0,
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Jogo da Velha Infinito"),
+        "labelScoreboard": MessageLookupByLibrary.simpleMessage("PLACAR"),
         "labelSinglePlayer": MessageLookupByLibrary.simpleMessage("UM JOGADOR"),
         "labelTryAgain":
             MessageLookupByLibrary.simpleMessage("TENTAR NOVAMENTE")

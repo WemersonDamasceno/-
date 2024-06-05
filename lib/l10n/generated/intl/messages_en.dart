@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "labelPlayerNWinner": m0,
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Tic Tac Toe Infinity"),
+        "labelScoreboard": MessageLookupByLibrary.simpleMessage("SCOREBOARD"),
         "labelSinglePlayer":
             MessageLookupByLibrary.simpleMessage("SINGLE PLAYER"),
         "labelTryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")

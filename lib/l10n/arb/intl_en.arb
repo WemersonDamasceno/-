@@ -22,6 +22,8 @@
   "@labelPlayOnline": {},
   "labelProjectName": "Tic Tac Toe Infinity",
   "@labelProjectName": {},
+  "labelScoreboard": "SCOREBOARD",
+  "@labelScoreboard": {},
   "labelSinglePlayer": "SINGLE PLAYER",
   "@labelSinglePlayer": {},
   "labelTryAgain": "TRY AGAIN",

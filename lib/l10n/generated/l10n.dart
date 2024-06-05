@@ -140,6 +140,16 @@ class S {
     );
   }
 
+  /// `SCOREBOARD`
+  String get labelScoreboard {
+    return Intl.message(
+      'SCOREBOARD',
+      name: 'labelScoreboard',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `SINGLE PLAYER`
   String get labelSinglePlayer {
     return Intl.message(
