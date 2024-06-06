@@ -40,15 +40,15 @@ class GameController extends ChangeNotifier {
         await player.play(AssetSource(AppSounds.win));
         winner = currentPlayer;
 
-        showDialogEndGame();
-
-        resetGame();
-
         if (winner == 'X') {
           qtdWinsPlayer1++;
         } else {
           qtdWinsPlayer2++;
         }
+
+        showDialogEndGame();
+
+        resetGame();
       } else {
         currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
       }
