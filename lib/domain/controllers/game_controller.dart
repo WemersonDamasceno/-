@@ -42,6 +42,8 @@ class GameController extends ChangeNotifier {
 
         showDialogEndGame();
 
+        resetGame();
+
         if (winner == 'X') {
           qtdWinsPlayer1++;
         } else {

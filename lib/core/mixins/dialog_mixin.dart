@@ -5,7 +5,7 @@ import 'package:tictactoe/core/widgets/button_large_widget.dart';
 import 'package:tictactoe/l10n/generated/l10n.dart';
 
 mixin DialogMixin {
-  showDialogEndGame(BuildContext context, int winner, Function resetGame) {
+  showDialogEndGame({required BuildContext context, required int winner}) {
     return showDialog(
       context: context,
       barrierDismissible: false,
@@ -30,8 +30,6 @@ mixin DialogMixin {
               label: S.current.labelTryAgain,
               onPressed: () {
                 Navigator.pop(context);
-
-                resetGame();
               },
             )
           ],

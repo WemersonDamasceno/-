@@ -24,11 +24,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "labelAttention": MessageLookupByLibrary.simpleMessage("Attention!"),
+        "labelAttentionDescription": MessageLookupByLibrary.simpleMessage(
+            "When a piece becomes blurred, it means it will be moved to a new position."),
         "labelChallenge": MessageLookupByLibrary.simpleMessage("MY CHALLENGES"),
         "labelClose": MessageLookupByLibrary.simpleMessage("Close"),
         "labelGameMode": MessageLookupByLibrary.simpleMessage("GAME MODE"),
         "labelLetsGo": MessageLookupByLibrary.simpleMessage("Lets go"),
         "labelMultiPlayer": MessageLookupByLibrary.simpleMessage("MULTIPLAYER"),
+        "labelMultiPlayerShowCase":
+            MessageLookupByLibrary.simpleMessage("Multiplayer mode"),
+        "labelMultiPlayerShowCaseDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Challenge a friend in matches on the same device."),
         "labelOptionIndefine": MessageLookupByLibrary.simpleMessage(
             "Option currently unavailable!"),
         "labelPlayOnline": MessageLookupByLibrary.simpleMessage("PLAY ONLINE"),
@@ -36,6 +44,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Tic Tac Toe Infinity"),
         "labelScoreboard": MessageLookupByLibrary.simpleMessage("SCOREBOARD"),
+        "labelScoreboardShowCase":
+            MessageLookupByLibrary.simpleMessage("Game Scoreboard"),
+        "labelScoreboardShowCaseDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Follow each player\'s score here."),
         "labelSinglePlayer":
             MessageLookupByLibrary.simpleMessage("SINGLE PLAYER"),
         "labelTryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")

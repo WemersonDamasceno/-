@@ -24,12 +24,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "labelAttention": MessageLookupByLibrary.simpleMessage("Atenção!"),
+        "labelAttentionDescription": MessageLookupByLibrary.simpleMessage(
+            "Quando uma peça fica desfocada, significa que ela será movida para uma nova posição."),
         "labelChallenge": MessageLookupByLibrary.simpleMessage("MEUS DESAFIOS"),
         "labelClose": MessageLookupByLibrary.simpleMessage("Fechar"),
         "labelGameMode": MessageLookupByLibrary.simpleMessage("MODO DE JOGO"),
         "labelLetsGo": MessageLookupByLibrary.simpleMessage("Vamos lá"),
         "labelMultiPlayer":
             MessageLookupByLibrary.simpleMessage("DOIS JOGADORES"),
+        "labelMultiPlayerShowCase":
+            MessageLookupByLibrary.simpleMessage("Modo multiplayer"),
+        "labelMultiPlayerShowCaseDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Desafie um amigo em partidas no mesmo dispositivo."),
         "labelOptionIndefine": MessageLookupByLibrary.simpleMessage(
             "Opção indisponível no momento!"),
         "labelPlayOnline": MessageLookupByLibrary.simpleMessage("JOGUE ONLINE"),
@@ -37,6 +45,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Jogo da Velha Infinito"),
         "labelScoreboard": MessageLookupByLibrary.simpleMessage("PLACAR"),
+        "labelScoreboardShowCase":
+            MessageLookupByLibrary.simpleMessage("Placar do Jogo"),
+        "labelScoreboardShowCaseDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Acompanhe a pontuação de cada jogador aqui."),
         "labelSinglePlayer": MessageLookupByLibrary.simpleMessage("UM JOGADOR"),
         "labelTryAgain":
             MessageLookupByLibrary.simpleMessage("TENTAR NOVAMENTE")

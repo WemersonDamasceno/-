@@ -50,6 +50,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Attention!`
+  String get labelAttention {
+    return Intl.message(
+      'Attention!',
+      name: 'labelAttention',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When a piece becomes blurred, it means it will be moved to a new position.`
+  String get labelAttentionDescription {
+    return Intl.message(
+      'When a piece becomes blurred, it means it will be moved to a new position.',
+      name: 'labelAttentionDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `MY CHALLENGES`
   String get labelChallenge {
     return Intl.message(
@@ -100,6 +120,26 @@ class S {
     );
   }
 
+  /// `Multiplayer mode`
+  String get labelMultiPlayerShowCase {
+    return Intl.message(
+      'Multiplayer mode',
+      name: 'labelMultiPlayerShowCase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Challenge a friend in matches on the same device.`
+  String get labelMultiPlayerShowCaseDescription {
+    return Intl.message(
+      'Challenge a friend in matches on the same device.',
+      name: 'labelMultiPlayerShowCaseDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Option currently unavailable!`
   String get labelOptionIndefine {
     return Intl.message(
@@ -145,6 +185,26 @@ class S {
     return Intl.message(
       'SCOREBOARD',
       name: 'labelScoreboard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Game Scoreboard`
+  String get labelScoreboardShowCase {
+    return Intl.message(
+      'Game Scoreboard',
+      name: 'labelScoreboardShowCase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Follow each player's score here.`
+  String get labelScoreboardShowCaseDescription {
+    return Intl.message(
+      'Follow each player\'s score here.',
+      name: 'labelScoreboardShowCaseDescription',
       desc: '',
       args: [],
     );
