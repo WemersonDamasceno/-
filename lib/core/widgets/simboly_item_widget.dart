@@ -11,6 +11,7 @@ class SimbolyItemWidget extends StatelessWidget {
     required this.isOpaque,
     required this.playerEnum,
   });
+
   @override
   Widget build(BuildContext context) {
     return Center(

@@ -12,6 +12,8 @@ class GameController extends ChangeNotifier {
   List<int> moveHistoryO = [];
   String currentPlayer = 'X';
   String winner = '';
+  List<int>?
+      winningLine; // Adiciona uma variável para armazenar a linha vencedora
 
   int qtdWinsPlayer1 = 0;
   int qtdWinsPlayer2 = 0;
@@ -46,9 +48,29 @@ class GameController extends ChangeNotifier {
           qtdWinsPlayer2++;
         }
 
-        showDialogEndGame();
+        board = List.generate(9, (index) => '');
 
-        resetGame();
+        if (winner == 'X') {
+          moveHistoryO.clear();
+
+          for (int i = 0; i < moveHistoryX.length; i++) {
+            board[moveHistoryX[i]] = 'X';
+          }
+        } else {
+          moveHistoryX.clear();
+          for (int i = 0; i < moveHistoryO.length; i++) {
+            board[moveHistoryO[i]] = 'O';
+          }
+        }
+
+        notifyListeners();
+
+        Future.delayed(const Duration(seconds: 2), () {
+          showDialogEndGame();
+          resetGame();
+        });
+
+        return;
       } else {
         currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
       }
@@ -73,6 +95,7 @@ class GameController extends ChangeNotifier {
       if (board[pattern[0]] == player &&
           board[pattern[1]] == player &&
           board[pattern[2]] == player) {
+        winningLine = pattern; // Armazena a linha vencedora
         return true;
       }
     }
@@ -98,5 +121,6 @@ class GameController extends ChangeNotifier {
     moveHistoryO.clear();
     currentPlayer = 'X';
     winner = '';
+    winningLine = null; // Reseta a linha vencedora
   }
 }
