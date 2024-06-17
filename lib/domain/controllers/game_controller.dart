@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:tictactoe/core/constants/app_sounds.dart';
+import 'package:tictactoe/core/widgets/board_widget.dart';
 
 class GameController extends ChangeNotifier {
   static final GameController instance = GameController._();
@@ -12,16 +15,15 @@ class GameController extends ChangeNotifier {
   List<int> moveHistoryO = [];
   String currentPlayer = 'X';
   String winner = '';
-  List<int>?
-      winningLine; // Adiciona uma variável para armazenar a linha vencedora
+  List<int>? winningLine;
 
   int qtdWinsPlayer1 = 0;
   int qtdWinsPlayer2 = 0;
 
   final AudioPlayer player = AudioPlayer();
 
-  Future<void> handleTap(
-      int index, BuildContext context, VoidCallback showDialogEndGame) async {
+  Future<void> handleTap(int index, BuildContext context,
+      VoidCallback showDialogEndGame, GameModeEnum gameModeEnum) async {
     if (board[index] == '' && winner == '') {
       await player.stop();
       await player.play(AssetSource(AppSounds.click1));
@@ -76,6 +78,35 @@ class GameController extends ChangeNotifier {
       }
 
       notifyListeners();
+
+      // Verifique se é a vez da IA
+      if (gameModeEnum == GameModeEnum.singlePlayer && currentPlayer == 'O') {
+        Future.delayed(const Duration(milliseconds: 500), () {
+          _makeAIMove(context, showDialogEndGame);
+        });
+      }
+    }
+  }
+
+  Future<void> _makeAIMove(
+    BuildContext context,
+    VoidCallback showDialogEndGame,
+  ) async {
+    List<int> availableMoves = [];
+    for (int i = 0; i < board.length; i++) {
+      if (board[i] == '') {
+        availableMoves.add(i);
+      }
+    }
+
+    if (availableMoves.isNotEmpty) {
+      int moveIndex = availableMoves[Random().nextInt(availableMoves.length)];
+      await handleTap(
+        moveIndex,
+        context,
+        showDialogEndGame,
+        GameModeEnum.singlePlayer,
+      );
     }
   }
 

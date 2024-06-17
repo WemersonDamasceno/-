@@ -54,8 +54,9 @@ class _ChooseGameModePageState extends State<ChooseGameModePage>
                   GameModeItemWidget(
                     image: AppImages.singlePlayerMode,
                     label: S.current.labelSinglePlayer,
-                    onTap: () => showSnackbarWithMessage(context),
-                    isEnable: false,
+                    onTap: () => GoRouter.of(context).pushNamed(
+                      AppRoutes.singlePlayer,
+                    ),
                   ),
                   Showcase(
                     key: _one,

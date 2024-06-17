@@ -65,13 +65,17 @@ class _BoardWidgetState extends State<BoardWidget> with DialogMixin {
                   );
 
                   return GestureDetector(
-                    onTap: () async =>
-                        await controller.handleTap(index, context, () {
-                      showDialogEndGame(
-                        context: context,
-                        winner: controller.winner == 'X' ? 1 : 2,
-                      );
-                    }),
+                    onTap: () async => await controller.handleTap(
+                      index,
+                      context,
+                      () {
+                        showDialogEndGame(
+                          context: context,
+                          winner: controller.winner == 'X' ? 1 : 2,
+                        );
+                      },
+                      widget.gameModeEnum,
+                    ),
                     child: Container(
                       margin: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
