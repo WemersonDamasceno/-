@@ -65,7 +65,7 @@ class GameController extends ChangeNotifier {
 
         notifyListeners();
 
-        Future.delayed(const Duration(seconds: 2), () {
+        Future.delayed(const Duration(milliseconds: 1500), () {
           showDialogEndGame();
           resetGame();
         });
