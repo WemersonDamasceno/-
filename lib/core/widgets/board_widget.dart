@@ -6,13 +6,16 @@ import 'package:tictactoe/core/constants/app_images.dart';
 import 'package:tictactoe/core/mixins/dialog_mixin.dart';
 import 'package:tictactoe/core/widgets/actual_simboly_widget.dart';
 import 'package:tictactoe/core/widgets/background_gradient_widget.dart';
-import 'package:tictactoe/domain/controllers/game_controller.dart';
+import 'package:tictactoe/domain/controllers/base_game_controller.dart';
+import 'package:tictactoe/domain/controllers/singleplayer_game_controller.dart';
 
 class BoardWidget extends StatefulWidget {
   final GameModeEnum gameModeEnum;
+  final GameController gameController;
 
   const BoardWidget({
     required this.gameModeEnum,
+    required this.gameController,
     super.key,
   });
 
@@ -22,6 +25,7 @@ class BoardWidget extends StatefulWidget {
 
 class _BoardWidgetState extends State<BoardWidget> with DialogMixin {
   final GlobalKey _one = GlobalKey();
+
   BuildContext? myContext;
 
   @override
@@ -48,7 +52,7 @@ class _BoardWidgetState extends State<BoardWidget> with DialogMixin {
             minHeight: constraints.minWidth,
             minWidth: constraints.minWidth,
           ),
-          child: Consumer<GameController>(builder: (_, controller, __) {
+          child: Consumer<SinglePlayerController>(builder: (_, controller, __) {
             return GridView.builder(
                 shrinkWrap: true,
                 itemCount: 9,
@@ -65,17 +69,14 @@ class _BoardWidgetState extends State<BoardWidget> with DialogMixin {
                   );
 
                   return GestureDetector(
-                    onTap: () async => await controller.handleTap(
-                      index,
-                      context,
-                      () {
-                        showDialogEndGame(
-                          context: context,
-                          winner: controller.winner == 'X' ? 1 : 2,
-                        );
-                      },
-                      widget.gameModeEnum,
-                    ),
+                    onTap: () async =>
+                        await controller.handleTap(index, context, () {
+                      showDialogEndGame(
+                        context: context,
+                        winner: controller.winner == 'X' ? 1 : 2,
+                        gameModeEnum: widget.gameModeEnum,
+                      );
+                    }),
                     child: Container(
                       margin: const EdgeInsets.all(5),
                       decoration: BoxDecoration(

@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:provider/provider.dart';
-import 'package:tictactoe/domain/controllers/game_controller.dart';
 import 'package:tictactoe/l10n/generated/l10n.dart';
 import 'package:tictactoe/presentation/router/router.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => GameController.instance,
-      child: const MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
