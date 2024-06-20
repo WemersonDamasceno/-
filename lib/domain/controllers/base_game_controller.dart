@@ -15,7 +15,11 @@ abstract class GameController extends ChangeNotifier {
   final AudioPlayer player = AudioPlayer();
 
   Future<void> handleTap(
-      int index, BuildContext context, VoidCallback showDialogEndGame);
+    int index,
+    BuildContext context,
+    VoidCallback showDialogEndGame,
+    bool isInsaneMode,
+  );
 
   bool checkWinner(String player) {
     const List<List<int>> winPatterns = [

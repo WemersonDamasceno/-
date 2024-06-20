@@ -4,27 +4,24 @@ import 'package:tictactoe/core/constants/app_sounds.dart';
 import 'package:tictactoe/domain/controllers/base_game_controller.dart';
 
 class MultiPlayerController extends GameController {
-  static final MultiPlayerController instance = MultiPlayerController._();
-
-  MultiPlayerController._();
-
   @override
-  Future<void> handleTap(
-      int index, BuildContext context, VoidCallback showDialogEndGame) async {
+  Future<void> handleTap(int index, BuildContext context,
+      VoidCallback showDialogEndGame, bool isInsaneMode) async {
     if (board[index] == '' && winner == '') {
       await player.stop();
       await player.play(AssetSource(AppSounds.click1));
 
       board[index] = currentPlayer;
 
-      List<int> currentHistory =
-          currentPlayer == 'X' ? moveHistoryX : moveHistoryO;
+      if (isInsaneMode) {
+        List<int> currentHistory =
+            currentPlayer == 'X' ? moveHistoryX : moveHistoryO;
 
-      currentHistory.add(index);
-
-      if (currentHistory.length > 3) {
-        int removeIndex = currentHistory.removeAt(0);
-        board[removeIndex] = '';
+        currentHistory.add(index);
+        if (currentHistory.length > 3) {
+          int removeIndex = currentHistory.removeAt(0);
+          board[removeIndex] = '';
+        }
       }
 
       if (checkWinner(currentPlayer)) {
@@ -54,7 +51,18 @@ class MultiPlayerController extends GameController {
 
         notifyListeners();
 
-        Future.delayed(const Duration(milliseconds: 1500), () {
+        Future.delayed(const Duration(milliseconds: 1000), () {
+          showDialogEndGame();
+          resetGame();
+        });
+
+        return;
+      } else if (!board.contains('')) {
+        // Verifica se deu empate
+        await player.play(AssetSource(AppSounds.win));
+        notifyListeners();
+
+        Future.delayed(const Duration(milliseconds: 500), () {
           showDialogEndGame();
           resetGame();
         });

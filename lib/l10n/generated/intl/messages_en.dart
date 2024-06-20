@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(s) => "PLAYER ${s} WINS!\nCONGRATULATIONS!";
+  static String m0(s) => "Player ${s}";
+
+  static String m1(s) => "Player ${s} Wins!\nCongratulations!";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -29,7 +31,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "When a piece becomes blurred, it means it will be moved to a new position."),
         "labelChallenge": MessageLookupByLibrary.simpleMessage("MY CHALLENGES"),
         "labelClose": MessageLookupByLibrary.simpleMessage("Close"),
+        "labelCommingSoon":
+            MessageLookupByLibrary.simpleMessage("COMMING SOON"),
+        "labelComputer": MessageLookupByLibrary.simpleMessage("Computer"),
+        "labelDrawDescription": MessageLookupByLibrary.simpleMessage(
+            "HOW AMAZING!\nTHE GAME ENDED IN A DRAW!"),
+        "labelDrawTitle": MessageLookupByLibrary.simpleMessage("TIED"),
         "labelGameMode": MessageLookupByLibrary.simpleMessage("GAME MODE"),
+        "labelInsaneMode": MessageLookupByLibrary.simpleMessage("INSANE GAME"),
         "labelLetsGo": MessageLookupByLibrary.simpleMessage("Lets go"),
         "labelMultiPlayer": MessageLookupByLibrary.simpleMessage("MULTIPLAYER"),
         "labelMultiPlayerShowCase":
@@ -37,10 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "labelMultiPlayerShowCaseDescription":
             MessageLookupByLibrary.simpleMessage(
                 "Challenge a friend in matches on the same device."),
+        "labelNormalMode": MessageLookupByLibrary.simpleMessage("NORMAL GAME"),
         "labelOptionIndefine": MessageLookupByLibrary.simpleMessage(
             "Option currently unavailable!"),
         "labelPlayOnline": MessageLookupByLibrary.simpleMessage("PLAY ONLINE"),
-        "labelPlayerNWinner": m0,
+        "labelPlayer": m0,
+        "labelPlayerNWinner": m1,
         "labelProjectName":
             MessageLookupByLibrary.simpleMessage("Tic Tac Toe Infinity"),
         "labelScoreboard": MessageLookupByLibrary.simpleMessage("SCOREBOARD"),
@@ -51,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Follow each player\'s score here."),
         "labelSinglePlayer":
             MessageLookupByLibrary.simpleMessage("SINGLE PLAYER"),
-        "labelTryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN")
+        "labelTryAgain": MessageLookupByLibrary.simpleMessage("TRY AGAIN"),
+        "labelYouLose":
+            MessageLookupByLibrary.simpleMessage("What a shame, you lost!")
       };
 }

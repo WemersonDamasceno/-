@@ -25,7 +25,7 @@ class TitlePageWidget extends StatelessWidget {
         ),
         Container(
           width: size.width * 0.25,
-          height: 10,
+          height: 8,
           decoration: BoxDecoration(
             color: AppColors.primary,
             borderRadius: BorderRadius.circular(10),

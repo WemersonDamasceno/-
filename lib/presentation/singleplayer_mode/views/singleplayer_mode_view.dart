@@ -11,7 +11,9 @@ import 'package:tictactoe/domain/controllers/singleplayer_game_controller.dart';
 import 'package:tictactoe/l10n/generated/l10n.dart';
 
 class SinglePlayerModeView extends StatefulWidget {
-  const SinglePlayerModeView({super.key});
+  final bool isInsaneMode;
+
+  const SinglePlayerModeView({super.key, required this.isInsaneMode});
 
   @override
   State<SinglePlayerModeView> createState() => _SinglePlayerModeViewState();
@@ -63,14 +65,14 @@ class _SinglePlayerModeViewState extends State<SinglePlayerModeView>
                       description: S.current.labelScoreboardShowCaseDescription,
                       child: CardScoreboardWidget(
                         color: AppColors.secondary,
-                        player: 'Player 1',
+                        player: S.current.labelPlayer(1),
                         score: gameController.qtdWinsPlayer1,
                         image: AppImages.x,
                       ),
                     ),
                     CardScoreboardWidget(
                       color: AppColors.primary,
-                      player: 'Computer',
+                      player: S.current.labelComputer,
                       score: gameController.qtdWinsPlayer2,
                       image: AppImages.o,
                     ),
@@ -79,7 +81,8 @@ class _SinglePlayerModeViewState extends State<SinglePlayerModeView>
                 const SizedBox(height: 16),
                 BoardWidget(
                   gameModeEnum: GameModeEnum.singlePlayer,
-                  gameController: SinglePlayerController.instance,
+                  gameController: gameController,
+                  isInsaneMode: widget.isInsaneMode,
                 ),
               ],
             );

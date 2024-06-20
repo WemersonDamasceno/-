@@ -8,8 +8,18 @@
   "@labelChallenge": {},
   "labelClose": "Fechar",
   "@labelClose": {},
+  "labelCommingSoon": "EM BREVE",
+  "@labelCommingSoon": {},
+  "labelComputer": "Computador",
+  "@labelComputer": {},
+  "labelDrawDescription": "QUE INCRÍVEL!\nO JOGO TERMINOU EMPATADO!",
+  "@labelDrawDescription": {},
+  "labelDrawTitle": "EMPATADOS",
+  "@labelDrawTitle": {},
   "labelGameMode": "MODO DE JOGO",
   "@labelGameMode": {},
+  "labelInsaneMode": "INSANE GAME",
+  "@labelInsaneMode": {},
   "labelLetsGo": "Vamos lá",
   "@labelLetsGo": {},
   "labelMultiPlayer": "DOIS JOGADORES",
@@ -18,9 +28,17 @@
   "@labelMultiPlayerShowCase": {},
   "labelMultiPlayerShowCaseDescription": "Desafie um amigo em partidas no mesmo dispositivo.",
   "@labelMultiPlayerShowCaseDescription": {},
+  "labelNormalMode": "NORMAL GAME",
+  "@labelNormalMode": {},
   "labelOptionIndefine": "Opção indisponível no momento!",
   "@labelOptionIndefine": {},
-  "labelPlayerNWinner": "JOGADOR {s} VENCEU!\nPARABÉNS!",
+  "labelPlayer": "Jogador {s}",
+  "@labelPlayer": {
+    "placeholders": {
+      "s": {}
+    }
+  },
+  "labelPlayerNWinner": "Jogador {s} Venceu!\nParabéns!",
   "@labelPlayerNWinner": {
     "placeholders": {
       "s": {}
@@ -39,5 +57,7 @@
   "labelSinglePlayer": "UM JOGADOR",
   "@labelSinglePlayer": {},
   "labelTryAgain": "TENTAR NOVAMENTE",
-  "@labelTryAgain": {}
+  "@labelTryAgain": {},
+  "labelYouLose": "Que Pena, Você Perdeu!",
+  "@labelYouLose": {}
 }

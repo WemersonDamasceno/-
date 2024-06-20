@@ -8,8 +8,18 @@
   "@labelChallenge": {},
   "labelClose": "Close",
   "@labelClose": {},
+  "labelCommingSoon": "COMMING SOON",
+  "@labelCommingSoon": {},
+  "labelComputer": "Computer",
+  "@labelComputer": {},
+  "labelDrawDescription": "HOW AMAZING!\nTHE GAME ENDED IN A DRAW!",
+  "@labelDrawDescription": {},
+  "labelDrawTitle": "TIED",
+  "@labelDrawTitle": {},
   "labelGameMode": "GAME MODE",
   "@labelGameMode": {},
+  "labelInsaneMode": "INSANE GAME",
+  "@labelInsaneMode": {},
   "labelLetsGo": "Lets go",
   "@labelLetsGo": {},
   "labelMultiPlayer": "MULTIPLAYER",
@@ -17,9 +27,17 @@
   "labelMultiPlayerShowCase": "Multiplayer mode",
   "@labelMultiPlayerShowCase": {},
   "labelMultiPlayerShowCaseDescription": "Challenge a friend in matches on the same device.",
+  "labelNormalMode": "NORMAL GAME",
+  "@labelNormalMode": {},
   "labelOptionIndefine": "Option currently unavailable!",
   "@labelOptionIndefine": {},
-  "labelPlayerNWinner": "PLAYER {s} WINS!\nCONGRATULATIONS!",
+  "labelPlayer": "Player {s}",
+  "@labelPlayer": {
+    "placeholders": {
+      "s": {}
+    }
+  },
+  "labelPlayerNWinner": "Player {s} Wins!\nCongratulations!",
   "@labelPlayerNWinner": {
     "placeholders": {
       "s": {}
@@ -38,5 +56,7 @@
   "labelSinglePlayer": "SINGLE PLAYER",
   "@labelSinglePlayer": {},
   "labelTryAgain": "TRY AGAIN",
-  "@labelTryAgain": {}
+  "@labelTryAgain": {},
+  "labelYouLose": "What a shame, you lost!",
+  "@labelYouLose": {}
 }

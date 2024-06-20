@@ -90,11 +90,61 @@ class S {
     );
   }
 
+  /// `COMMING SOON`
+  String get labelCommingSoon {
+    return Intl.message(
+      'COMMING SOON',
+      name: 'labelCommingSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Computer`
+  String get labelComputer {
+    return Intl.message(
+      'Computer',
+      name: 'labelComputer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `HOW AMAZING!\nTHE GAME ENDED IN A DRAW!`
+  String get labelDrawDescription {
+    return Intl.message(
+      'HOW AMAZING!\nTHE GAME ENDED IN A DRAW!',
+      name: 'labelDrawDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TIED`
+  String get labelDrawTitle {
+    return Intl.message(
+      'TIED',
+      name: 'labelDrawTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `GAME MODE`
   String get labelGameMode {
     return Intl.message(
       'GAME MODE',
       name: 'labelGameMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `INSANE GAME`
+  String get labelInsaneMode {
+    return Intl.message(
+      'INSANE GAME',
+      name: 'labelInsaneMode',
       desc: '',
       args: [],
     );
@@ -140,6 +190,16 @@ class S {
     );
   }
 
+  /// `NORMAL GAME`
+  String get labelNormalMode {
+    return Intl.message(
+      'NORMAL GAME',
+      name: 'labelNormalMode',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Option currently unavailable!`
   String get labelOptionIndefine {
     return Intl.message(
@@ -150,10 +210,20 @@ class S {
     );
   }
 
-  /// `PLAYER {s} WINS!\nCONGRATULATIONS!`
+  /// `Player {s}`
+  String labelPlayer(Object s) {
+    return Intl.message(
+      'Player $s',
+      name: 'labelPlayer',
+      desc: '',
+      args: [s],
+    );
+  }
+
+  /// `Player {s} Wins!\nCongratulations!`
   String labelPlayerNWinner(Object s) {
     return Intl.message(
-      'PLAYER $s WINS!\nCONGRATULATIONS!',
+      'Player $s Wins!\nCongratulations!',
       name: 'labelPlayerNWinner',
       desc: '',
       args: [s],
@@ -225,6 +295,16 @@ class S {
     return Intl.message(
       'TRY AGAIN',
       name: 'labelTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What a shame, you lost!`
+  String get labelYouLose {
+    return Intl.message(
+      'What a shame, you lost!',
+      name: 'labelYouLose',
       desc: '',
       args: [],
     );

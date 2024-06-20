@@ -11,7 +11,9 @@ import 'package:tictactoe/domain/controllers/multiplayer_game_controller.dart';
 import 'package:tictactoe/l10n/generated/l10n.dart';
 
 class MultiPlayerModeView extends StatefulWidget {
-  const MultiPlayerModeView({super.key});
+  final bool isInsaneMode;
+
+  const MultiPlayerModeView({super.key, required this.isInsaneMode});
 
   @override
   State<MultiPlayerModeView> createState() => _MultiPlayerModeViewState();
@@ -63,14 +65,14 @@ class _MultiPlayerModeViewState extends State<MultiPlayerModeView>
                       description: S.current.labelScoreboardShowCaseDescription,
                       child: CardScoreboardWidget(
                         color: AppColors.secondary,
-                        player: 'Player 1',
+                        player: S.current.labelPlayer(1),
                         score: gameController.qtdWinsPlayer1,
                         image: AppImages.x,
                       ),
                     ),
                     CardScoreboardWidget(
                       color: AppColors.primary,
-                      player: 'Player 2',
+                      player: S.current.labelPlayer(2),
                       score: gameController.qtdWinsPlayer2,
                       image: AppImages.o,
                     ),
@@ -79,7 +81,8 @@ class _MultiPlayerModeViewState extends State<MultiPlayerModeView>
                 const SizedBox(height: 16),
                 BoardWidget(
                   gameModeEnum: GameModeEnum.multiPlayer,
-                  gameController: MultiPlayerController.instance,
+                  gameController: gameController,
+                  isInsaneMode: widget.isInsaneMode,
                 ),
               ],
             );
